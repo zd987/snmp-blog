@@ -1,0 +1,221 @@
+STATUS-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+	alarmMIB
+		FROM ALARM-MIB
+	MODULE-IDENTITY,
+	OBJECT-TYPE
+		FROM SNMPv2-SMI
+	OBJECT-GROUP
+		FROM SNMPv2-CONF;
+
+symplifiedMIB MODULE-IDENTITY
+	LAST-UPDATED "201403151248Z"	-- Mar 15, 2014 12:48:00 PM
+	ORGANIZATION ""
+	CONTACT-INFO
+		""
+	DESCRIPTION
+		""
+	REVISION "201403151248Z"	-- Mar 15, 2014 12:48:00 PM
+	DESCRIPTION
+		"Initial version."
+	-- 1.3.6.1.2.1.118.1
+	::= { alarmMIB 1 }
+
+
+singlepointIdentityRouterStatus OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.1
+	::= { symplifiedMIB 1 }
+
+
+serviceStatus OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.2
+	::= { symplifiedMIB 2 }
+
+
+serviceRunning OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.3
+	::= { symplifiedMIB 3 }
+
+
+servicePaused OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.4
+	::= { symplifiedMIB 4 }
+
+
+serviceStopped OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.5
+	::= { symplifiedMIB 5 }
+
+
+memoryStatus OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.6
+	::= { symplifiedMIB 6 }
+
+
+memoryMaximum OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.7
+	::= { symplifiedMIB 7 }
+
+
+memoryUsed OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.8
+	::= { symplifiedMIB 8 }
+
+
+memoryFree OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.9
+	::= { symplifiedMIB 9 }
+
+
+filesystemStatus OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.10
+	::= { symplifiedMIB 10 }
+
+
+filesystemTotal OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.11
+	::= { symplifiedMIB 11 }
+
+
+filesystemUsable OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.12
+	::= { symplifiedMIB 12 }
+
+
+sessionStatus OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.13
+	::= { symplifiedMIB 13 }
+
+
+sessionTotal OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.14
+	::= { symplifiedMIB 14 }
+
+
+sessionRejected OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.15
+	::= { symplifiedMIB 15 }
+
+
+simplelinkStatus OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.16
+	::= { symplifiedMIB 16 }
+
+
+simplelinkVpn OBJECT-TYPE
+	SYNTAX  OCTET STRING
+	MAX-ACCESS read-only
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.17
+	::= { symplifiedMIB 17 }
+
+
+symplifiedStatus OBJECT-GROUP
+	OBJECTS {
+		singlepointIdentityRouterStatus,
+		serviceStatus,
+		serviceRunning,
+		servicePaused,
+		serviceStopped,
+		memoryStatus,
+		memoryMaximum,
+		memoryUsed,
+		memoryFree,
+		filesystemStatus,
+		filesystemTotal,
+		filesystemUsable,
+		sessionStatus,
+		sessionTotal,
+		sessionRejected,
+		simplelinkStatus,
+		simplelinkVpn }
+	STATUS  current
+	DESCRIPTION
+		""
+	-- 1.3.6.1.2.1.118.1.18
+	::= { symplifiedMIB 18 }
+
+END
