@@ -20,7 +20,7 @@ Environment Setup
 ----
 You can setup the snmp agent / manager by using several existing tools. In my case, I use linux snmp service as the aggent(in vmware as virtual machine), and use *AdventNet SNMP Utilities* (its new version is called [WebNMS SNMP Utilities 5]) in windows as manager. In manager part, I use MIBBrowser to GET the OID value by SNMP, and use Trap Viewer to monitor the TRAP message.
 
-If you wonder how SNMP protocol works, you can check its protocol message content. Here I use [Wireshark] as the network protocol analyzer. Notice that wireshare could not track the message of localhost(127.0.0.1) on windows platform. You can refer to the [workaround].
+If you wonder how SNMP protocol works, you can check its protocol message content. Here I use [Wireshark] as the network protocol analyzer. Notice that wireshark could not track the message of localhost(127.0.0.1) on windows platform. You can refer to the [workaround].
 
 Design MIB
 ----
